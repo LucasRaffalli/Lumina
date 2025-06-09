@@ -1,0 +1,68 @@
+{
+  "name": "lumina",
+  "version": "1.0.0",
+  "description": "rich precense discord custom",
+  "main": "./out/main/main.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guasam/electron-react-app"
+  },
+  "author": {
+    "name": "LucasRaffalli",
+    "url": "https://github.com/LucasRaffalli"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "electron",
+      "esbuild"
+    ]
+  },
+  "scripts": {
+    "dev": "electron-vite dev -w",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts,.vue --fix",
+    "build": "tsc && vite build && electron-builder",
+    "start": "electron-vite preview",
+    "postinstall": "electron-builder install-app-deps",
+    "build:unpack": "electron-vite build && electron-builder --dir",
+    "build:win": "electron-vite build && electron-builder --win"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.2",
+    "@electron-toolkit/utils": "^4.0.0",
+    "@radix-ui/themes": "^3.2.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "discord-rpc": "^4.0.1",
+    "intlayer": "^5.4.2",
+    "lucide-react": "^0.510.0",
+    "react-i18next": "^15.5.2",
+    "react-router-dom": "^7.6.0",
+    "tailwind-merge": "^3.3.0",
+    "tw-animate-css": "^1.2.9"
+  },
+  "devDependencies": {
+    "@electron-toolkit/eslint-config": "^2.1.0",
+    "@electron-toolkit/eslint-config-ts": "^3.1.0",
+    "@electron-toolkit/tsconfig": "^1.0.1",
+    "@rushstack/eslint-patch": "^1.11.0",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "electron": "^35.2.0",
+    "electron-builder": "^26.0.12",
+    "electron-vite": "^3.1.0",
+    "eslint": "^9.25.1",
+    "eslint-plugin-react": "^7.37.5",
+    "framer-motion": "^12.7.4",
+    "prettier": "^3.5.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.2"
+  }
+}
