@@ -23,7 +23,6 @@ export default function ConfirmDialog({ title, description, confirmLabel = `${t(
             <AlertDialog.Content maxWidth="450px">
                 <AlertDialog.Title>{title}</AlertDialog.Title>
                 <AlertDialog.Description size="2">{description}</AlertDialog.Description>
-
                 <Flex gap="3" mt="4" justify="end">
                     <AlertDialog.Cancel>
                         <Button variant="soft" color="gray" className='btnCursor'>

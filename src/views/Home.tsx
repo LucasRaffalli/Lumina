@@ -54,19 +54,18 @@ export default function Home() {
               </Link>
             </ContainerInterface>
           </motion.div>
-          <motion.div variants={itemVariants}>
-            <ContainerInterface padding='3' justify='center' align='center'>
-              <Link to={'/settings'} className='update'>
-                {updateAvailable && (
+          {updateAvailable && (
+            <motion.div variants={itemVariants}>
+              <ContainerInterface padding='3' justify='center' align='center'>
+                <Link to={'/settings'} className='update'>
                   <Link to={'/settings/update'} title="Update available!">
                     <UpdateIcon size={24} color12='var(--accent-11)' color1='var(--accent-11)' color2='var(--accent-11)' color22='var(--accent-11)' />
 
                   </Link>
-                )}
-              </Link>
-            </ContainerInterface>
-          </motion.div>
-
+                </Link>
+              </ContainerInterface>
+            </motion.div>
+          )}
           <motion.div variants={itemVariants} style={{ width: "100%" }}>
             <ContainerInterface width='100%' direction='row' padding='2' justify='between' align='center' pr='4' pl='4'>
               <Text size='2' color='gray' align='center'>
