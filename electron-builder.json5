@@ -1,0 +1,110 @@
+{
+  "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
+  "appId": "net.protocol.lumina",  "asar": true,
+  "productName": "Lumina",
+  "directories": {
+    "output": "release/${version}",
+    "buildResources": "build"
+  },
+  "files": [
+    "dist",
+    "dist-electron",
+    "!node_modules/**/{CHANGELOG.md,README.md,README,readme.md,readme}",
+    "!node_modules/**/{test,__tests__,tests,powered-test,example,examples}",
+    "!node_modules/**/*.d.ts",
+    "!node_modules/**/*.map",
+    "!node_modules/**/*.esm.js",
+    "package.json"
+  ],
+  "publish": [{
+    "provider": "github",
+    "releaseType": "release",
+    "private": false,
+    "publishAutoUpdate": true
+  }],
+  "mac": {
+    "target": [
+      {
+        "target": "dmg",
+        "arch": ["x64", "arm64"]
+      }
+    ],
+    "artifactName": "${productName}_${version}.${ext}",
+    "icon": "build/installerIcon.icns",
+    "category": "public.app-category.business",
+    "darkModeSupport": true,
+    "hardenedRuntime": true,
+    "gatekeeperAssess": false
+  },
+  "dmg": {
+    "contents": [
+      {
+        "x": 130,
+        "y": 220
+      },
+      {
+        "x": 410,
+        "y": 220,
+        "type": "link",
+        "path": "/Applications"
+      }
+    ],
+    "window": {
+      "width": 540,
+      "height": 400
+    }
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": [
+          "x64"
+        ]
+      }
+    ],
+    "artifactName": "${productName}_${version}.${ext}",
+    "icon": "public/favicon.ico",
+    "extraResources": [
+      {
+        "from": "build",
+        "to": "build",
+        "filter": ["**/*"]
+      }
+    ]
+  },
+  "linux": {
+    "target": [
+      "AppImage",
+      "deb",
+      "rpm"
+    ],
+    "category": "Utility",
+    "icon": "build/installerIcon.png",
+    "maintainer": "LucasRaffalli",
+    "description": "Discord Rich Presence creator",
+    "desktop": {
+      "entry": {
+        "Name": "Lumina",
+        "Comment": "Discord Rich Presence creator",
+        "Categories": "Utility"
+      }
+    }
+  },
+  "compression": "maximum",
+  "nsis": {
+    "oneClick": false,
+    "perMachine": true,
+    "allowToChangeInstallationDirectory": true,
+    "deleteAppDataOnUninstall": true,
+    "installerIcon": "public/installerIcon.ico",
+    "uninstallerIcon": "public/uninstallerIcon.ico",
+    "installerSidebar": "build/installerSidebar.bmp",
+    "uninstallerSidebar": "build/uninstallerSidebar.bmp",
+    "include": "public/installer.nsh",
+    "artifactName": "${productName}_${version}_Setup.${ext}",
+    "differentialPackage": true,
+    "multiLanguageInstaller": true,
+    "displayLanguageSelector": true
+  }
+}

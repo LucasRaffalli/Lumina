@@ -1,24 +1,10 @@
 {
-  "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
-  "include": [
-    "lib/main/index.d.ts",
-    "electron.vite.config.*",
-    "lib/**/*",
-    "resources/**/*",
-    "app/**/*.ts",
-    "app/**/*.tsx"
-  ],
   "compilerOptions": {
     "composite": true,
-    "moduleResolution": "bundler",
-    "types": [
-      "electron-vite/node"
-    ],
-    "baseUrl": "./",
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
-  }
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["vite.config.ts", "package.json"]
 }

@@ -1,0 +1,130 @@
+{
+    "app": {
+        "title": "Lumina",
+        "description": "Lumina is a tool to help you manage your Discord rich presence."
+    },
+    "preview": {
+        "title": "Lumina",
+        "description": "Lumina is a tool to help you manage your Discord rich presence.",
+        "playing": "Playing",
+        "listening": "Listening to",
+        "watching": "Watching",
+        "streaming": "Streaming",
+        "competing": "Competing in",
+        "competing2": "Competing in",
+        "competing3": "Competing in"
+    },
+    "discord": {
+        "profilName": "Profil Name",
+        "clientId": "Client ID",
+        "details": "Details",
+        "timestamp": "Timestamp",
+        "state": "State",
+        "party": {
+            "title": "Party",
+            "size": "Size",
+            "max": "Max"
+        },
+        "largeImage": "Large Image",
+        "largeText": "Large Text",
+        "smallImage": "Small Image",
+        "smallText": "Small Text",
+        "createdAt": "Created at"
+    },
+    "buttons": {
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "insert": "Insert",
+        "close": "Close",
+        "open": "Open",
+        "settings": "Settings",
+        "connect": "Connect",
+        "disconnect": "Disconnect",
+        "update": "Update",
+        "resize": "Resize",
+        "resize2": "Enlarge",
+        "saveProfil": "Save Profil",
+        "addProfil": "Add Profil",
+        "updateProfil": "Update Profil",
+        "connecting": "Connecting...",
+        "reset": "Reset",
+        "exportProfiles": "Export Profiles",
+        "importProfiles": "Import Profiles",
+        "back": "Back"
+    },
+    "settings": {
+        "title": "Settings",
+        "language": "Language",
+        "theme": "Theme",
+        "dark": "Dark",
+        "light": "Light",
+        "french": "French",
+        "english": "English",
+        "system": "System",
+        "accentColor": "Accent Color",
+        "autoConnect": "Auto Connect",
+        "startMinimized": "Start Minimized",
+        "runOnStartup": "Run on Startup",
+        "version": "application version",
+        "discordPortal": "Discord Portal",
+        "github": "Github"
+
+    },
+    "status": {
+        "connected": "Connected",
+        "disconnected": "Disconnected",
+        "connecting": "Connecting...",
+        "updating": "Updating...",
+        "resizing": "Resizing...",
+        "discordNotOpen": "Discord is not open"
+    },
+    "menu": {
+        "file": {
+            "title": "File",
+            "exit": "Exit",
+            "checkUpdate": "Check for updates",
+            "home": "Home"
+        },
+        "view": {
+            "title": "View",
+            "reload": "Reload",
+            "devTools": "Developer tools",
+            "showNavbar": "Show navbar",
+            "actualSize": "Actual size",
+            "zoomIn": "Zoom in",
+            "zoomOut": "Zoom out",
+            "fullscreen": "Toggle fullscreen"
+        },
+        "window": {
+            "title": "Window",
+            "toolbar": "Show tools bar",
+            "shortcutsPanel": "Shortcuts panel",
+            "darkMode": "Dark mode",
+            "lightMode": "Light mode",
+            "shortcuts": "Shortcuts",
+            "maximize": "Maximize",
+            "minimize": "Minimize",
+            "close": "Close"
+        },
+        "credits": {
+            "title": "Credits"
+        }
+    },
+    "update": {
+        "title": "Update",
+        "smallText1": "Send us feedback, or suggest new ideas. Every suggestion counts!",
+        "smallText2": "Get the latest from Lumina and help shape its future.",
+        "error": "Error",
+        "checking": "Check in progress...",
+        "checkUpdate": "Check for updates",
+        "currentVersion": "You have the latest version.",
+        "currentVersion2": "Current version",
+        "changeUpdate": "Release notes",
+        "available": "Update available",
+        "downloded": " Update downloaded",
+        "availableMessage": "A new version is now available. Would you like to download it?",
+        "restartMessage": "The application will restart to install the update",
+        "confirmDownload": "Would you like to download this update?"
+    }
+}

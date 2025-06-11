@@ -1,0 +1,87 @@
+.body__preview {
+    background-color: var(--gray-2);
+}
+
+.rich__preview {
+    background-color: blue;
+}
+
+.banner__preview {
+    background-image: url('/img/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.avatar__preview__container {
+    position: absolute;
+    top: -40px;
+    left: 16px;
+}
+
+.avatar__preview {
+    position: static;
+    border: 5px solid var(--gray-2);
+    z-index: 2;
+}
+
+.rich__preview {
+    border-radius: var(--radius-6);
+    background-color: var(--gray-4);
+}
+
+.avatar__preview__small {
+    border: 5px solid var(--gray-4);
+    position: absolute;
+    /* top: 0px; */
+    bottom: -5px;
+    right: -5px;
+    z-index: 3;
+}
+
+.glow {
+    position: relative;
+    z-index: 10;
+}
+
+@keyframes border-pulse {
+    0% {
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        opacity: 0.9;
+    }
+
+    50% {
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        opacity: 0.6;
+    }
+
+    100% {
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        opacity: 0.9;
+    }
+}
+
+.glow::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 8px;
+    pointer-events: none;
+    border: 2px solid var(--accent-9);
+    opacity: 0.9;
+    transition: border-color 0.2s, opacity 0.2s;
+    animation: border-pulse 1.2s infinite;
+}
