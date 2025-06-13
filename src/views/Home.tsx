@@ -5,7 +5,7 @@ import ContainerInterface from '@/components/template/ContainerInterface';
 import { motion } from 'framer-motion'
 import { RichPresenceForm } from '@/components/RichPresenceForm';
 import StatusConnect from '@/components/richPresence/StatusConnect';
-import { BoxIcon, DownloadCloud, Settings } from 'lucide-react';
+import { ArrowUpFromLine, BoxIcon, DownloadCloud, Settings } from 'lucide-react';
 import { useUpdate } from '@/context/UpdateContext';
 import UpdateIcon from '@/components/design/UpdateIcon';
 import { t } from 'i18next';
@@ -59,8 +59,7 @@ export default function Home() {
               <ContainerInterface padding='3' justify='center' align='center'>
                 <Link to={'/settings'} className='update'>
                   <Link to={'/settings/update'} title="Update available!">
-                    <UpdateIcon size={24} color12='var(--accent-11)' color1='var(--accent-11)' color2='var(--accent-11)' color22='var(--accent-11)' />
-
+                    <ArrowUpFromLine color='var(--accent-11)' size={24} />
                   </Link>
                 </Link>
               </ContainerInterface>
@@ -69,12 +68,9 @@ export default function Home() {
           <motion.div variants={itemVariants} style={{ width: "100%" }}>
             <ContainerInterface width='100%' direction='row' padding='2' justify='between' align='center' pr='4' pl='4'>
               <Text size='2' color='gray' align='center'>
-                <Link to={'https://discord.com/developers/applications'} className='hover__underline'>{t('settings.discordPortal')}</Link>
+                <Link to={'https://discord.com/developers/applications'} target="_blank" rel="noopener noreferrer" className='hover__underline'>{t('settings.discordPortal')}</Link>
               </Text>
               <StatusConnect />
-
-
-
             </ContainerInterface>
           </motion.div>
 

@@ -35,6 +35,7 @@
         "save": "Save",
         "cancel": "Cancel",
         "delete": "Delete",
+        "yes": "Confirm",
         "insert": "Insert",
         "close": "Close",
         "open": "Open",
@@ -42,6 +43,14 @@
         "connect": "Connect",
         "disconnect": "Disconnect",
         "update": "Update",
+        "download": {
+            "download": "Download",
+            "downloading": "Download in progress...",
+            "downloaded": "Downloaded update",
+            "update": {
+                "button": "Download the update"
+            }
+        },
         "resize": "Resize",
         "resize2": "Enlarge",
         "saveProfil": "Save Profil",
@@ -69,7 +78,6 @@
         "version": "application version",
         "discordPortal": "Discord Portal",
         "github": "Github"
-
     },
     "status": {
         "connected": "Connected",

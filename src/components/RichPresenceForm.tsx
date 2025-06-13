@@ -1,6 +1,6 @@
 // src/renderer/RichPresenceForm.tsx
 import { Box, Button, Flex, IconButton, Select, TextField, Separator, Text } from '@radix-ui/themes';
-import { ArrowDown01, BookOpen, ChartArea, Clock, Fingerprint, Image, Maximize, Minimize, Plus, Save, Trash } from 'lucide-react';
+import { ArrowDown01, BookOpen, ChartArea, Clock, Fingerprint, Image, Maximize, Minimize, Plus, RefreshCcw, Save, Trash } from 'lucide-react';
 import { Fragment, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useWindowSize } from '@/context/WindowSizeContext';
@@ -399,7 +399,7 @@ export function RichPresenceForm() {
                         </motion.div>
                         <motion.div variants={itemVariants}>
                             <Button variant='soft' color='green' onClick={handleUpdate} className='btnCursor' disabled={!isConnected || updateCooldown}>
-                                {updateCooldown ? `${cooldownTimer}s` : t('buttons.update')}
+                                {updateCooldown ? `${cooldownTimer}s` : <RefreshCcw size={18} />}
                             </Button>
                         </motion.div>
 
@@ -417,7 +417,7 @@ export function RichPresenceForm() {
                                 </TextField.Slot>
                             </TextField.Root>
                         </motion.div>
-                        <motion.div variants={itemVariants} style={{ width: "100%" }} id="form-field-timestamp">
+                        <motion.div variants={itemVariants} style={{ width: "50%" }} id="form-field-timestamp">
                             <TextField.Root placeholder={t('discord.timestamp')} type='datetime-local' value={timestamp} onChange={e => setTimestamp(e.target.value)} />
                         </motion.div>
 
