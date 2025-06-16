@@ -1,6 +1,4 @@
 import { Box, Flex } from '@radix-ui/themes'
-import { motion } from 'framer-motion'
-import React, { Children } from 'react'
 import { Outlet } from 'react-router-dom'
 import { useWindowSize } from '../context/WindowSizeContext';
 import Navbar from '@/components/Navbar';

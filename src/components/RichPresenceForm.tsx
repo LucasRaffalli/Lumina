@@ -1,7 +1,6 @@
-// src/renderer/RichPresenceForm.tsx
 import { Box, Button, Flex, IconButton, Select, TextField, Separator, Text } from '@radix-ui/themes';
-import { ArrowDown01, BookOpen, ChartArea, Clock, Fingerprint, Image, Maximize, Minimize, Plus, RefreshCcw, Save, Trash } from 'lucide-react';
-import { Fragment, useEffect, useState } from 'react';
+import { ArrowDown01, BookOpen, ChartArea, Fingerprint, Image, Maximize, Minimize, Plus, RefreshCcw, Save, Trash } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useWindowSize } from '@/context/WindowSizeContext';
 import { t } from 'i18next';
@@ -28,7 +27,6 @@ export function RichPresenceForm() {
     const [smallText, setSmallText] = useState('');
     const [allImageKeys, setAllImageKeys] = useState<string[]>([]);
     const [timestamp, setTimestamp] = useState<string | ''>('');
-    const [activityType, setActivityType] = useState<string>('PLAYING');
 
     const [profileName, setProfileName] = useState('');
 
@@ -130,9 +128,8 @@ export function RichPresenceForm() {
         localStorage.setItem("lastUsedProfile", JSON.stringify(currentProfile));
         window.ipcRenderer.send('update-rich', updateData);
 
-        // Activer le cooldown avec compteur
         setUpdateCooldown(true);
-        setCooldownTimer(5);
+        setCooldownTimer(10);
 
         const interval = setInterval(() => {
             setCooldownTimer(prev => {
@@ -143,7 +140,7 @@ export function RichPresenceForm() {
                 }
                 return prev - 1;
             });
-        }, 2000);
+        }, 1200);
     };
     const handleConnect = async () => {
         if (!clientId.trim()) {

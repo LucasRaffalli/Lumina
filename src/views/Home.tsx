@@ -1,13 +1,11 @@
-import { Flex, Text, Heading, Box } from '@radix-ui/themes'
-import { version, description, } from '../../package.json';
+import { Flex, Text } from '@radix-ui/themes'
 import { Link } from 'react-router-dom';
 import ContainerInterface from '@/components/template/ContainerInterface';
 import { motion } from 'framer-motion'
 import { RichPresenceForm } from '@/components/RichPresenceForm';
 import StatusConnect from '@/components/richPresence/StatusConnect';
-import { ArrowUpFromLine, BoxIcon, DownloadCloud, Settings } from 'lucide-react';
+import { ArrowUpFromLine, Settings } from 'lucide-react';
 import { useUpdate } from '@/context/UpdateContext';
-import UpdateIcon from '@/components/design/UpdateIcon';
 import { t } from 'i18next';
 
 export default function Home() {

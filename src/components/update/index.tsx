@@ -8,6 +8,7 @@ import { t } from 'i18next';
 import '@/css/update.css'
 import ConfirmDialog from '../template/ConfirmDialog';
 import { Download } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const UpdatePage = () => {
     const [isChecking, setIsChecking] = useState(false);
@@ -157,16 +158,9 @@ const UpdatePage = () => {
                 )}
             </Modal>
 
-
             <Flex direction={"column"} align={"center"} justify={"between"} height={"100%"} width={"100%"} style={{ overflow: "hidden", position: "relative" }}>
                 <Flex width={"100%"} height={"100%"} justify={"center"} align={"center"} direction={"column"}>
-                    <Flex direction={"column"}>
-{/* 
-                        <ParallaxEffect intensity={0.7} perspective={1200} tiltMax={45} deadzoneX={0.1} deadzoneY={0.245}>
-                            <CardStylized effectVariant='update' isGrayTop sizeTextSmall="3" uppercase sizeText='4' weight='bold' contentTop={t('update.smallText2')} topSmallText={t('update.smallText1')} bottomTitle={t('update.currentVersion2')} bottomDescription={<SmokeEffect text={updateInfo.version} size='2' uppercase weight='medium' color='gray' />} />
-                        </ParallaxEffect>
-                        <Box className='shadowCard'></Box> */}
-                    </Flex>
+
                     <Button size="3" disabled={isChecking || updateInfo.isDownloading} onClick={checkUpdate} className='btnCursor'>
                         <Download width={16} height={16} />
                         {isChecking ? t("update.checking") : t("update.checkUpdate")}
@@ -174,13 +168,10 @@ const UpdatePage = () => {
                 </Flex>
 
                 <Flex width={"100%"} align={"center"} justify={"center"} gap={"4"}>
+                    <Link to={"/"} className='hover__underline'>{t("buttons.back")}</Link>
                     <a href="https://github.com/LucasRaffalli/Lumina" target="_blank" rel="noopener noreferrer" className='hover__underline'>Github</a>
                 </Flex>
             </Flex>
-
-
-
-
         </ContainerInterface>
     );
 };

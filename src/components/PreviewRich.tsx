@@ -3,10 +3,12 @@ import { Avatar, Box, Flex, Heading, HoverCard, Text } from '@radix-ui/themes'
 import '@/css/previewRich.css'
 import { t } from 'i18next';
 import ContainerInterface from './template/ContainerInterface';
+import GameIcon from './design/GameIcon';
+import PersonIcon from './design/PersonIcon';
 
 function formatElapsedTime(isoString: string, now: Date) {
   const start = new Date(isoString);
-  let diff = Math.floor((now.getTime() - start.getTime()) / 1000); // en secondes
+  let diff = Math.floor((now.getTime() - start.getTime()) / 1000);
   if (diff < 0) diff = 0;
   const hours = Math.floor(diff / 3600);
   const mins = Math.floor((diff % 3600) / 60);
@@ -38,7 +40,7 @@ export default function PreviewRich() {
       try {
         setProfile(JSON.parse(storedProfile));
       } catch (e) {
-        setProfile(storedProfile); // fallback si ce n'est pas du JSON
+        setProfile(storedProfile);
       }
     }
   }, []);
@@ -120,20 +122,24 @@ export default function PreviewRich() {
             <Flex direction={'column'}>
               <Text weight={'bold'} size={"2"} onMouseEnter={() => handleGlow('clientId', true)} onMouseLeave={() => handleGlow('clientId', false)}>{profile?.profileName}</Text>
               <Text size={"1"} onMouseEnter={() => handleGlow('details', true)} onMouseLeave={() => handleGlow('details', false)}>{profile?.details}</Text>
-              <Flex direction={'row'} gap={"2"}>
+              <Flex direction={'row'} gap={"1"} align={'center'}>
+                <GameIcon size={"12px"} color='#3DD68C' />
                 <Text weight={'bold'} size={"1"} color='green' onMouseEnter={() => handleGlow('timestamp', true)} onMouseLeave={() => handleGlow('timestamp', false)}>
                   {profile?.timestamp ? formatElapsedTime(profile.timestamp, now) : '0:00'}
                 </Text>
-                <Flex direction={'row'} gap={"1"}>
+                {profile?.partyMax > 0 && profile?.partySize > 0 && (
+                  <Flex direction={'row'} gap={"1"}>
                   <Text size={"1"} color='gray' onMouseEnter={() => handleGlow('state', true)} onMouseLeave={() => handleGlow('state', false)}>{profile?.state}</Text>
-                  <Text size={"1"} color='gray'>
-                    (
-                    <Text onMouseEnter={() => handleGlow('partySize', true)} onMouseLeave={() => handleGlow('partySize', false)}>{profile?.partySize}</Text>
-                    sur
-                    <Text onMouseEnter={() => handleGlow('partyMax', true)} onMouseLeave={() => handleGlow('partyMax', false)}>{profile?.partyMax}</Text>
-                    )
-                  </Text>
+                  <Flex direction={'row'} gap={"1"} align={'center'}>
+                    <PersonIcon size={"14px"} color='#B4B4B4' />
+                    <Text size={"1"} color='gray'>(</Text>
+                    <Text size={"1"} color='gray' onMouseEnter={() => handleGlow('partySize', true)} onMouseLeave={() => handleGlow('partySize', false)}>{profile?.partySize}</Text>
+                    <Text size={"1"} color='gray'>{t('preview.of')}</Text>
+                    <Text size={"1"} color='gray' onMouseEnter={() => handleGlow('partyMax', true)} onMouseLeave={() => handleGlow('partyMax', false)}>{profile?.partyMax}</Text>
+                    <Text size={"1"} color='gray'> )</Text>
+                  </Flex>
                 </Flex>
+                )}
               </Flex>
             </Flex>
           </Flex>

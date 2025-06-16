@@ -1,5 +1,5 @@
-import { Avatar, Box, Flex, Heading, HoverCard, ScrollArea, Tooltip, Text, Link, Separator, Button } from '@radix-ui/themes'
-import React, { useEffect, useState } from 'react'
+import { Avatar, Box, Flex, HoverCard, ScrollArea, Text, Separator, Button } from '@radix-ui/themes'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import EditableText from './EditableText';
 import { t } from 'i18next';

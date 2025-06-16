@@ -1,5 +1,5 @@
-import { Box, Flex, Switch, Text, Select, Separator, ScrollArea } from '@radix-ui/themes'
-import React, { useEffect, useState } from 'react'
+import { Flex, Switch, Text, Select, Separator } from '@radix-ui/themes'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { version } from '../../package.json';
 import { useTranslation } from 'react-i18next'
@@ -152,7 +152,6 @@ export default function Settings() {
                 </Flex>
                 <motion.div variants={itemVariants}>
                     <Separator size={"4"} />
-
                 </motion.div>
 
                 <Flex justify="between" align="center">

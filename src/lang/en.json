@@ -7,12 +7,11 @@
         "title": "Lumina",
         "description": "Lumina is a tool to help you manage your Discord rich presence.",
         "playing": "Playing",
+        "of": "of",
         "listening": "Listening to",
         "watching": "Watching",
         "streaming": "Streaming",
-        "competing": "Competing in",
-        "competing2": "Competing in",
-        "competing3": "Competing in"
+        "competing": "Competing in"
     },
     "discord": {
         "profilName": "Profil Name",

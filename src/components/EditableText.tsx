@@ -1,5 +1,5 @@
 import { Text, TextField, Heading } from '@radix-ui/themes'
-import React, { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 type RadixColor =
     | 'gray' | 'ruby' | 'gold' | 'bronze' | 'brown' | 'yellow' | 'amber'
