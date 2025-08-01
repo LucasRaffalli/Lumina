@@ -30,7 +30,7 @@
     "jspdf-autotable": "^5.0.2",
     "lucide-react": "^0.511.0",
     "motion": "^12.9.4",
-    "pdfjs-dist": "^5.2.133",
+    "pdfjs-dist": "^5.4.54",
     "react-i18next": "^15.5.1",
     "react-pdf": "^9.2.1",
     "react-router-dom": "^7.6.1",
